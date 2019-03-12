@@ -1,0 +1,18 @@
+.dataTable{
+  background-color: lightgray;
+  width: 1200px;
+  max-height: 3600px;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid darkgrey;
+}
+
+tr:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+
+tr{
+  font-family: 'Thasadith', sans-serif; 
+  font-weight: 700;
+}

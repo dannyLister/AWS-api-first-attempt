@@ -1,0 +1,38 @@
+.subtitle{
+  padding-top:8px;
+  margin: 8px;
+}
+
+.formField {
+  background-color: lightblue;
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+  border-radius: 12px;
+  border-color: none;
+}
+
+.inputBox {
+  padding: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+.button{
+  margin: 10px;
+  background-color: lightgreen;
+  border-color: rgb(135, 253, 0);
+  padding: 10px;
+  border-radius: 12px; 
+  width: 300px;
+  font-size:  24px;
+  font-weight: bold;
+  transition: 2s;
+}
+
+
+tr.th{
+  width:170px;
+}

@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/form/form';
+import DataField from './components/dataField/dataField';
+import Users from './components/users/users';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1 className="pageTitle">API Test</h1>
+        <form className="form">
+          <h3 className="subTitle2">User Details - Currently hardcoded, (dynamically generate later.)</h3>
+          <Users />
+          <br />
+          <Form />
+          <br />
+          <h3 className="subTitle2">Returned Data - Dynamically generated dependant upon input in blue field above.</h3>
+          <DataField />
+        </form>
       </div>
     );
   }

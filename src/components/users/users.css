@@ -1,0 +1,19 @@
+.userTable{
+  background-color: lightgray;
+  width: 1200px;
+  max-height: 3600px;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid darkgrey;
+}
+
+tbody:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+
+tbody{
+  font-family: 'Thasadith', sans-serif; 
+  font-weight: 700;
+  width: 170px;
+}
