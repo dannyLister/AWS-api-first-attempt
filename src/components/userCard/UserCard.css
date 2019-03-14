@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin:auto;
+  width: 95%;
+  max-height: 600px;
+  border-radius: 12px;
+  background-color: rgba(139, 139, 139, 0.644);
+  color: white;
+  text-align: center;
+  
+}
+
+.classNames2{
+  text-align: 'null';
+}
+
+.placeholder{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+
+.header {
+  text-decoration: underline;
+  background-color: black;
+  color: white;
+}
+
+.details{
+  flex-direction: row;
+
+}

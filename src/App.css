@@ -1,11 +1,15 @@
-div{
+div {
   font-family: 'Thasadith', sans-serif;
+}
+
+.form { 
+  padding: 20px;
 }
 
 .pageTitle{
   text-align: center;
   border-bottom: 3px solid;
-  width: 1200px;
+  width: 100%;
   margin: auto;
 }
 

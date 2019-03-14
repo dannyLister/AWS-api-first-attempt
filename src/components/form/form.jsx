@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './form.css';
 
-class Form extends Component {
+class FormField extends Component {
   render() {
     return (
       <div className="formField">
@@ -16,4 +16,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default FormField;
