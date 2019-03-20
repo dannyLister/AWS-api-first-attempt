@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import LoaderEdit from './components/Loader/Loader';
 import './App.css';
 import FormField from './components/form/form';
 import Users from './components/users/users';
-import { getPerson } from './services/person.service.fake';
+import { getPeople } from './services/person.service';
+import './components/Loader/Loader.css';
 
 class App extends Component {
   state = {
-    person: null
+    people: [],
+    err: null
   };
 
-  componentDidMount() {
-    const person = getPerson();
-    this.setState({ person });
+  componentDidMount = async () => {
+    try {
+      const people = await getPeople();
+      this.setState({ people });
+    } catch (err) {
+      this.setState({ err })
+    }
   }
-
   render() {
     return (
       <div className="main">
@@ -22,19 +28,24 @@ class App extends Component {
           <br />
           <FormField />
           <br />
-          {/* <h3 className="subTitle2">Returned Data - Dynamically generated dependant upon input in blue field above.</h3>
-          <DataField /> */}
-          <h3 className="subTitle2">User Details - Currently hardcoded, (dynamically generate later.)</h3>
+          <h3 className="subTitle2">User Details</h3>
           {
-            this.state.person &&
-            <Users user={this.state.person} />
+            this.state.err ?
+              <div>There was an error: {this.state.err.toString()} </div>
+              : this.state.people.length > 0 ?
+                <Users persons={this.state.people} />
+                :
+                <LoaderEdit className="loader"
+                  type="TailSpin"
+                  color="Orange"
+                  height="25%"
+                  width="25%"
+                />
           }
         </div>
-        {/* <UserCard /> */}
       </div >
     );
   }
 }
-
 
 export default App;

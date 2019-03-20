@@ -8,4 +8,4 @@ export const getPerson = () => {
     company: "Covea",
     phone: "095597840978"
   };
-}
+};

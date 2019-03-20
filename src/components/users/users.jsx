@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import './users.css';
 
 class Users extends Component {
+
   render() {
-    const { user } = this.props;
+
+    console.log(this.props);
+    const { persons } = this.props;
+    console.log("PROPS MATE", this.props)
     return (
       <table className="userTable">
         <thead>
-          <tr>
-            <th>ID</th>
+          <tr className="th">
+            <th>Id</th>
             <th>Active</th>
             <th>Age</th>
             <th>First Name</th>
@@ -17,16 +21,21 @@ class Users extends Component {
             <th>Phone</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>{user.id}</td>
-            <td>{user.active.toString()}</td>
-            <td>{user.age}</td>
-            <td>{user.firstName}</td>
-            <td>{user.lastName}</td>
-            <td>{user.company}</td>
-            <td>{user.phone}</td>
-          </tr>
+        <tbody className="userTable">
+
+          {persons.map(person => (
+            <tr key={person.id}>
+              <td>{person.id}</td>
+              <td>{`${person.isActive}`}</td>
+              <td>{person.age}</td>
+              <td>{person.firstName}</td>
+              <td>{person.lastName}</td>
+              <td>{person.company}</td>
+              <td>{person.phone}</td>
+            </tr>
+          ))}
+
+
         </tbody>
       </table >
     );

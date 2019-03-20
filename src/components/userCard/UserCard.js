@@ -4,7 +4,7 @@ import './UserCard.css';
 class UserCard extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="card">
           <div className="header">
             <h3>firstName + lastName</h3>
