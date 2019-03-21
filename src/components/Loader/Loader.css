@@ -1,2 +1,13 @@
+.loaderContainer{
+  margin: auto;
+  display: block;
+  border: 1px solid darkgrey;
+  padding: 5%;
+  width: 200px;
+  border-radius: 50%;
+}
 
+.loaderBox{
+  margin-left: 30%;
+}
 

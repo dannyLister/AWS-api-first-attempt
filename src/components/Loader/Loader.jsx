@@ -5,7 +5,11 @@ import './Loader.css';
 class LoaderEdit extends React.Component {
   render() {
     return (
-      <Loader />
+      <div className="loaderContainer">
+        <div className="loaderBox">
+          <Loader />
+        </div>
+      </div>
     );
   }
 }

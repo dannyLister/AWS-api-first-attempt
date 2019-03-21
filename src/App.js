@@ -25,9 +25,7 @@ class App extends Component {
       <div className="main">
         <h1 className="pageTitle">API Test</h1>
         <div className="form">
-          <br />
           <FormField />
-          <br />
           <h3 className="subTitle2">User Details</h3>
           {
             this.state.err ?
@@ -35,12 +33,14 @@ class App extends Component {
               : this.state.people.length > 0 ?
                 <Users persons={this.state.people} />
                 :
-                <LoaderEdit className="loader"
-                  type="TailSpin"
-                  color="Orange"
-                  height="25%"
-                  width="25%"
-                />
+                <div className="loaderContainer">
+                  <LoaderEdit className="loaderBox"
+                    type="TailSpin"
+                    color="Orange"
+                    height="100%"
+                    width="100%"
+                  />
+                </div>
           }
         </div>
       </div >
