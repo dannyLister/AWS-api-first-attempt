@@ -7,7 +7,12 @@ class LoaderEdit extends React.Component {
     return (
       <div className="loaderContainer">
         <div className="loaderBox">
-          <Loader />
+          <Loader
+            type="Bars"
+            color="Orange"
+            height="100%"
+            width="100%"
+          />
         </div>
       </div>
     );

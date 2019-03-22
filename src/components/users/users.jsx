@@ -9,7 +9,7 @@ class Users extends Component {
     const { persons } = this.props;
     console.log("PROPS MATE", this.props)
     return (
-      <table className="userTable">
+      <table className="userTable" >
         <thead>
           <tr className="th">
             <th>Id</th>
@@ -21,8 +21,7 @@ class Users extends Component {
             <th>Phone</th>
           </tr>
         </thead>
-        <tbody className="userTable">
-
+        <tbody className="userTable" onChange={this.handleChange}>
           {persons.map(person => (
             <tr key={person.id}>
               <td>{person.id}</td>
@@ -34,8 +33,6 @@ class Users extends Component {
               <td>{person.phone}</td>
             </tr>
           ))}
-
-
         </tbody>
       </table >
     );

@@ -12,7 +12,7 @@ export const getPeople = async () => {
   }
 };
 
-export const getPerson = (id) => {
+export const getPerson = async (id) => {
 
 };
 
